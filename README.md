@@ -18,92 +18,43 @@
 
 ## Test environment
 
-- CPU: Intel Core i5 450M 2.4Ghz
-- OS: Ubuntu Server 12.04
-- Node.JS version: 0.8.21
+- CPU: Intel Core i7-2675QM 2.2Ghz 8GB 
+- OS: Windows 7 Pro 64-Bit
+- Node.JS version: 0.10.33
 
 ## Results
 
-	Rendering 100000 templates:
-
-	ECT
-	  Escaped   : 2180ms
-	  Unescaped : 133ms
-	  Total     : 2313ms
-
-	Dust
-	  Escaped   : 2547ms
-	  Unescaped : 363ms
-	  Total     : 2910ms
-
-	Hogan.js
-	  Escaped   : 3252ms
-	  Unescaped : 758ms
-	  Total     : 4010ms
-
-	Gaikan
-	  Escaped   : 4288ms
-	  Unescaped : 85ms
-	  Total     : 4373ms
-
-	Fest
-	  Escaped   : 4179ms
-	  Unescaped : 265ms
-	  Total     : 4444ms
-
-	EJS without `with`
-	  Escaped   : 4526ms
-	  Unescaped : 485ms
-	  Total     : 5011ms
-
-	doT
-	  Escaped   : 5329ms
-	  Unescaped : 82ms
-	  Total     : 5411ms
-
-	Swig
-	  Escaped   : 5020ms
-	  Unescaped : 407ms
-	  Total     : 5427ms
-
-	Underscore
-	  Escaped   : 5775ms
-	  Unescaped : 2486ms
-	  Total     : 8261ms
-
-	Eco
-	  Escaped   : 8512ms
-	  Unescaped : 991ms
-	  Total     : 9503ms
-
-	EJS
-	  Escaped   : 6316ms
-	  Unescaped : 2734ms
-	  Total     : 9050ms
-
-	Handlebars.js
-	  Escaped   : 7815ms
-	  Unescaped : 2573ms
-	  Total     : 10388ms
-
-	Jade without `with`
-	  Escaped   : 8566ms
-	  Unescaped : 2982ms
-	  Total     : 11548ms
-
-	CoffeeKup
-	  Escaped   : 4968ms
-	  Unescaped : 9983ms
-	  Total     : 14951ms
-
-	Jade
-	  Escaped   : 18330ms
-	  Unescaped : 12095ms
-	  Total     : 30425ms
+	Performance report for 100000 templates (win32):
+	
+	Gaikan               ( 1645ms) - fastest
+	HTMLing              ( 1966ms) - 20% slower
+	Fest                 ( 2000ms) - 22% slower
+	doT                  ( 2561ms) - 56% slower
+	Handlebars.js        ( 2563ms) - 56% slower
+	artTemplate          ( 2743ms) - 67% slower
+	Underscore           ( 3802ms) - 131% slower
+	EGS                  ( 3979ms) - 142% slower
+	Slm                  ( 4008ms) - 144% slower
+	ECT                  ( 4084ms) - 148% slower
+	Hogan.js             ( 5462ms) - 232% slower
+	Kendo UI no `with`   ( 5519ms) - 236% slower
+	Ant.js `.set`        ( 5927ms) - 260% slower
+	Dust                 ( 6036ms) - 267% slower
+	Jade without `with`  ( 6198ms) - 277% slower
+	EJS without `with`   ( 6295ms) - 283% slower
+	Swig                 ( 6851ms) - 316% slower
+	Eco                  ( 8330ms) - 406% slower
+	Kendo UI             ( 8395ms) - 410% slower
+	EJS                  ( 8596ms) - 423% slower
+	Jade                 ( 9818ms) - 497% slower
+	BH                   (10013ms) - 509% slower
+	CoffeeKup            (10499ms) - 538% slower
+	BT                   (26059ms) - 1484% slower
+	Ant.js               (33208ms) - 1919% slower
 
 ## Usage
 
-	git clone git://github.com/baryshev/template-benchmark.git
+	git clone https://github.com/HansHammel/template-benchmark.git
 	cd template-benchmark
 	npm install
 	node ./benchmark.js

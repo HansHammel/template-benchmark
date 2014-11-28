@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>{{{title}}}</title>
+	</head>
+	<body>
+		<p>{{{text}}}</p>
+		<div a-repeat={{projects}}>
+			<a href="{{{url}}}">{{{name}}}</a>
+			<p>{{{description}}}</p>
+		</div>
+		{{projects.length ? 'No projects' : ''}}
+	</body>
+</html>

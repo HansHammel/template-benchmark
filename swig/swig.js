@@ -2,9 +2,12 @@ var swig = require('swig');
 var compiled;
 var tplData;
 
+/*
 swig.init({
 	root: __dirname
 });
+ */
+swig.setDefaults({loader: swig.loaders.fs(__dirname)});
 
 module.exports.prepare = function (data, done) {
 	tplData = data;
@@ -19,6 +22,6 @@ module.exports.prepareUnescaped = function (data, done) {
 };
 
 module.exports.step = function (done) {
-	var html = compiled.render(tplData);
+	var html = compiled(tplData);
 	done(undefined, html);
 };
