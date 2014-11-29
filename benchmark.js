@@ -17,6 +17,7 @@ var dot = require('./dot/dot.js');
 var handlebars = require('./handlebars/handlebars.js');
 var coffeekup = require('./coffeekup/coffeekup.js');
 var underscore = require('./underscore/underscore.js');
+var lodash = require('./lodash/lodash.js');
 var gaikan = require('./gaikan/gaikan.js');
 var slm = require('./slm/slm');
 var egs = require('./egs/egs.js');
@@ -26,6 +27,9 @@ var htmling = require('./htmling/htmling.js');
 var kendo = require('./kendo-ui/with.js');
 var kendoWithoutWith = require('./kendo-ui/nowith.js');
 var artTemplate = require('./artTemplate/artTemplate.js');
+var plates = require('./plates/plates.js');
+var nunjucks = require('./nunjucks/nunjucks.js');
+
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -64,32 +68,35 @@ var testUnescaped = function(name, sample, cb) {
 };
 
 var samples = [
-
-	{ name : 'Jade', sample : jade },
-	{ name : 'CoffeeKup', sample : coffeekup },
-	{ name : 'Jade without `with`', sample : jadeWithoutWith },
-	{ name : 'Handlebars.js', sample : handlebars },
-	{ name : 'Eco', sample : eco },
-	{ name : 'EJS', sample : ejs },
-	{ name : 'Underscore', sample : underscore },
-	{ name : 'Swig', sample : swig },
-	{ name : 'doT', sample : dot },
-	{ name : 'EJS without `with`', sample : ejsWithoutWith },
-	{ name : 'Fest', sample : fest },
-	{ name : 'Gaikan', sample: gaikan },
-	{ name : 'Hogan.js', sample : hogan },
-	{ name : 'Dust', sample : dust },
-	{name: 'ECT', sample: ect},
-	{name: 'EGS', sample: egs},
-	{name: 'Slm', sample: slm},
 	{name: 'Ant.js `.set`', sample: antSet},
 	{name: 'Ant.js', sample: ant},
-	{name: 'BT', sample: bt},
+	{name: 'artTemplate', sample: artTemplate},
 	{name: 'BH', sample: bh},
+	{name: 'BT', sample: bt},
+	{name: 'CoffeeKup', sample : coffeekup},
+	{name: 'doT', sample : dot},
+	{name: 'Dust', sample : dust},
+	{name: 'Eco', sample : eco},
+	{name: 'ECT', sample: ect},
+	{name: 'EGS', sample: egs},
+	{name: 'EJS without `with`', sample : ejsWithoutWith},
+	{name: 'EJS', sample : ejs},
+	{name: 'Fest', sample : fest},
+	{name: 'Gaikan', sample: gaikan},
+	{name: 'Handlebars.js', sample : handlebars},
+	{name: 'Hogan.js', sample : hogan},
 	{name: 'HTMLing', sample: htmling},
-	{name: 'Kendo UI', sample: kendo},
+	{name: 'Jade without `with`', sample : jadeWithoutWith},
+	{name: 'Jade', sample : jade},
 	{name: 'Kendo UI no `with`', sample: kendoWithoutWith},
-	{name: 'artTemplate', sample: artTemplate}
+	{name: 'Kendo UI', sample: kendo},
+	{name: 'lodash', sample: lodash},
+	{name: 'Nunjucks', sample: nunjucks},
+	//{name: 'plates', sample: plates},
+	//{name: 'reactive.js', sample: reactive},
+	{name: 'Slm', sample: slm},
+	{name: 'Swig', sample : swig},
+	{name: 'Underscore', sample : underscore}
 ];
 
 var results = [];
