@@ -29,6 +29,8 @@ var kendoWithoutWith = require('./kendo-ui/nowith.js');
 var artTemplate = require('./artTemplate/artTemplate.js');
 var plates = require('./plates/plates.js');
 var nunjucks = require('./nunjucks/nunjucks.js');
+var tmpl = require("./tmpl/tmpl.js");
+//var reactive = require("./reactive/reactive.js");
 
 
 var test = function(name, sample, cb) {
@@ -96,6 +98,7 @@ var samples = [
 	//{name: 'reactive.js', sample: reactive},
 	{name: 'Slm', sample: slm},
 	{name: 'Swig', sample : swig},
+	{name: 'blueimp-tmpl', sample : tmpl},
 	{name: 'Underscore', sample : underscore}
 ];
 

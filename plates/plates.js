@@ -20,6 +20,7 @@ module.exports.prepareUnescaped = function (data, done) {
 };
 
 module.exports.step = function (done) {
+    /*just for testing not working yet!*/
     var html = compiled;
     done(undefined, html);
 };
