@@ -67,3 +67,5 @@ not up to date
 	cd template-benchmark
 	npm install
 	node ./benchmark.js
+
+[![Dependency Status](https://david-dm.org/HansHammel/template-benchmark.svg)](https://david-dm.org/HansHammel/template-benchmark)
