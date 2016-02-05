@@ -1,37 +1,54 @@
 var data = require('./data');
 
-var count = 100000;
-var bh = require('./bh/bh.js');
-var bt = require('./bt/bt.js');
-var ect = require('./ect/ect.js');
-var ejs = require('./ejs/ejs.js');
-var ejsWithoutWith = require('./ejs-without-with/ejs.js');
-var jade = require('./jade/jade.js');
-var jadeWithoutWith = require('./jade-without-with/jade.js');
-var eco = require('./eco/eco.js');
-var swig = require('./swig/swig.js');
-var hogan = require('./hogan/hogan.js');
-var dust = require('./dust/dust.js');
-var fest = require('./fest/fest.js');
-var dot = require('./dot/dot.js');
-var handlebars = require('./handlebars/handlebars.js');
-var coffeekup = require('./coffeekup/coffeekup.js');
-var underscore = require('./underscore/underscore.js');
-var lodash = require('./lodash/lodash.js');
-var gaikan = require('./gaikan/gaikan.js');
-var slm = require('./slm/slm');
-var egs = require('./egs/egs.js');
-var ant = require('./antjs/ant.js');
-var antSet = require('./antjs/ant.set.js');
-var htmling = require('./htmling/htmling.js');
-var kendo = require('./kendo-ui/with.js');
-var kendoWithoutWith = require('./kendo-ui/nowith.js');
-var artTemplate = require('./artTemplate/artTemplate.js');
-var plates = require('./plates/plates.js');
-var nunjucks = require('./nunjucks/nunjucks.js');
-var tmpl = require("./tmpl/tmpl.js");
-//var reactive = require("./reactive/reactive.js");
+//var count = 100000;
+var count = 1;
+var fs=require('fs');
 
+var ant = require('./templates/antjs/ant.js');
+var antSet = require('./templates/antjs/ant.set.js');
+var artTemplate = require('./templates/artTemplate/artTemplate.js');
+var bh = require('./templates/bh/bh.js');
+var bt = require('./templates/bt/bt.js');
+var coffeekup = require('./templates/coffeekup/coffeekup.js');
+var dot = require('./templates/dot/dot.js');
+var dust = require('./templates/dust/dust.js');
+var eco = require('./templates/eco/eco.js');
+var ect = require('./templates/ect/ect.js');
+//var egs = require('./templates/egs/egs.js');
+var ejs = require('./templates/ejs/ejs.js');
+var ejsWithoutWith = require('./templates/ejs-without-with/ejs.js');
+var fest = require('./templates/fest/fest.js');
+var gaikan = require('./templates/gaikan/gaikan.js');
+var handlebars = require('./templates/handlebars/handlebars.js');
+var hogan = require('./templates/hogan/hogan.js');
+var htmling = require('./templates/htmling/htmling.js');
+var jade = require('./templates/jade/jade.js');
+var jadeWithoutWith = require('./templates/jade-without-with/jade.js');
+//var kendo = require('./templates/kendo-ui/with.js');
+//var kendoWithoutWith = require('./templates/kendo-ui/nowith.js');
+var lodash = require('./templates/lodash/lodash.js');
+var nunjucks = require('./templates/nunjucks/nunjucks.js');
+var plates = require('./templates/plates/plates.js');
+//var reactive = require("./templates/reactive/reactive.js"); //package and deps are broken
+var slm = require('./templates/slm/slm');
+var swig = require('./templates/swig/swig.js');
+var tmpl = require("./templates/tmpl/tmpl.js");
+var underscore = require('./templates/underscore/underscore.js');
+
+/*
+todo:
+ "enb": "*",
+ "enb-bt": "*",
+ "domjs": "*",
+ "icanhaz": "*",
+ "jqtpl": "*",
+ "jquery": "*",
+ "jsdom-nogyp": "*",
+ "razor-tmpl": "*",
+ "transparency": "*",
+ "xtemplate": "*",
+ "xtpl": "*"
+ */
 
 var test = function(name, sample, cb) {
 	var i = 0;
@@ -42,12 +59,22 @@ var test = function(name, sample, cb) {
 			var now = Date.now();
 			cb(null, name, now - start);
 		}
-	}
+	};
 	sample.prepare(data, function() {
-		start = Date.now();
-		for (var j = 0; j < count; j++) {
-			sample.step(done);
-		}
+		//run once to store the output for validation before we start measuring
+		sample.step(function(undef, html){
+			fs.writeFileSync('comp/'+name+'.html',html);
+			start = Date.now();
+			for (var j = 0; j < count; j++) {
+				sample.step(done);
+			}
+		});
+		/*
+		 start = Date.now();
+		 for (var j = 0; j < count; j++) {
+		 sample.step(done);
+		 }
+		*/
 	});
 };
 
@@ -60,12 +87,21 @@ var testUnescaped = function(name, sample, cb) {
 			var now = Date.now();
 			cb(null, name, now - start);
 		}
-	}
+	};
 	sample.prepareUnescaped(data, function() {
+		sample.step(function(undef, html){
+			fs.writeFileSync('comp/'+name+'.unescaped.html',html);
+			start = Date.now();
+			for (var j = 0; j < count; j++) {
+				sample.step(done);
+			}
+		});
+		/*
 		start = Date.now();
 		for (var j = 0; j < count; j++) {
 			sample.step(done);
 		}
+		*/
 	});
 };
 
@@ -78,9 +114,9 @@ var samples = [
 	{name: 'CoffeeKup', sample : coffeekup},
 	{name: 'doT', sample : dot},
 	{name: 'Dust', sample : dust},
-	{name: 'Eco', sample : eco},
+	//{name: 'Eco', sample : eco},
 	{name: 'ECT', sample: ect},
-	{name: 'EGS', sample: egs},
+	//{name: 'EGS', sample: egs},
 	{name: 'EJS without `with`', sample : ejsWithoutWith},
 	{name: 'EJS', sample : ejs},
 	{name: 'Fest', sample : fest},
@@ -90,11 +126,11 @@ var samples = [
 	{name: 'HTMLing', sample: htmling},
 	{name: 'Jade without `with`', sample : jadeWithoutWith},
 	{name: 'Jade', sample : jade},
-	{name: 'Kendo UI no `with`', sample: kendoWithoutWith},
-	{name: 'Kendo UI', sample: kendo},
+	//{name: 'Kendo UI no `with`', sample: kendoWithoutWith},
+	//{name: 'Kendo UI', sample: kendo},
 	{name: 'lodash', sample: lodash},
 	{name: 'Nunjucks', sample: nunjucks},
-	//{name: 'plates', sample: plates},
+	{name: 'plates', sample: plates},
 	//{name: 'reactive.js', sample: reactive},
 	{name: 'Slm', sample: slm},
 	{name: 'Swig', sample : swig},

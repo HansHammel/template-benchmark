@@ -1,19 +1,20 @@
 var fs = require('fs');
-var tmpl = require("blueimp-tmpl");
+var coffeekup = require('coffeekup');
 var compiled;
 var tplData;
 
 module.exports.prepare = function (data, done) {
-	var str = fs.readFileSync(__dirname + '/tpl_escaped.tmpl', 'utf8');
+	var str = fs.readFileSync(__dirname + '/tpl_escaped.coffeekup', 'utf8');
 	tplData = data;
-	compiled = tmpl.tmpl(str);
+	compiled = coffeekup.compile(str);
 	done();
 };
 
 module.exports.prepareUnescaped = function (data, done) {
-	var str = fs.readFileSync(__dirname + '/tpl_unescaped.tmpl', 'utf8');
+	var str = fs.readFileSync(__dirname + '/tpl_unescaped.coffeekup', 'utf8');
 	tplData = data;
-	compiled = tmpl.tmpl(str);
+	tplData.autoescape = true;
+	compiled = coffeekup.compile(str);
 	done();
 };
 
