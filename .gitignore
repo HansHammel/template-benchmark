@@ -7,7 +7,6 @@ artifacts/
 bower_components/
 #build/
 #coverage/
-node_modules/
 #release/
 #iisnode/
 #d.ts/
@@ -520,3 +519,4 @@ packages/
 _ReSharper.*
 *.resharper
 Ankh.NoLoad
+/node_modules/

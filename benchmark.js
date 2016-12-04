@@ -1,7 +1,7 @@
 var data = require('./data');
 
-//var count = 100000;
-var count = 1;
+var count = 100000;
+//var count = 1000;
 var fs=require('fs');
 
 var ant = require('./templates/antjs/ant.js');
@@ -23,7 +23,9 @@ var handlebars = require('./templates/handlebars/handlebars.js');
 var hogan = require('./templates/hogan/hogan.js');
 var htmling = require('./templates/htmling/htmling.js');
 var jade = require('./templates/jade/jade.js');
+var pug = require('./templates/pug/pug.js');
 var jadeWithoutWith = require('./templates/jade-without-with/jade.js');
+var pugWithoutWith = require('./templates/pug-without-with/pug.js');
 //var kendo = require('./templates/kendo-ui/with.js');
 //var kendoWithoutWith = require('./templates/kendo-ui/nowith.js');
 var lodash = require('./templates/lodash/lodash.js');
@@ -126,6 +128,8 @@ var samples = [
 	{name: 'HTMLing', sample: htmling},
 	{name: 'Jade without `with`', sample : jadeWithoutWith},
 	{name: 'Jade', sample : jade},
+    {name: 'Pug without `with`', sample : pugWithoutWith},
+    {name: 'Pug', sample : pug},
 	//{name: 'Kendo UI no `with`', sample: kendoWithoutWith},
 	//{name: 'Kendo UI', sample: kendo},
 	{name: 'lodash', sample: lodash},
