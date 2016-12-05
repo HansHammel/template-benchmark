@@ -40,117 +40,37 @@
 
 ## Results as of 12/4/2016
 
-	Performance report for 100000 templates:
-	
-    Underscore
-      Escaped   : 2715ms
-      Unescaped : 1834ms
-      Total     : 4549ms
+    Performance report for 10000 templates (win32):
 
-    blueimp-tmpl
-      Escaped   : 1977ms
-      Unescaped : 66ms
-      Total     : 2043ms
-
-    Swig
-      Escaped   : 7213ms
-      Unescaped : 255ms
-      Total     : 7468ms
-
-    Slm
-      Escaped   : 4317ms
-      Unescaped : 75ms
-      Total     : 4392ms
-
-    plates
-      Escaped   : 4ms
-      Unescaped : 4ms
-      Total     : 8ms
-
-    Nunjucks
-      Escaped   : 5329ms
-      Unescaped : 4370ms
-      Total     : 9699ms
-
-    lodash
-      Escaped   : 2308ms
-      Unescaped : 2048ms
-      Total     : 4356ms
-
-    Pug
-      Escaped   : 5883ms
-      Unescaped : 150ms
-      Total     : 6033ms
-
-    Pug without `with`
-      Escaped   : 5962ms
-      Unescaped : 46ms
-      Total     : 6008ms
-
-    Jade
-      Escaped   : 6592ms
-      Unescaped : 2747ms
-      Total     : 9339ms
-
-    Jade without `with`
-      Escaped   : 2737ms
-      Unescaped : 532ms
-      Total     : 3269ms
-
-    HTMLing
-      Escaped   : 1792ms
-      Unescaped : 61ms
-      Total     : 1853ms
-
-    Hogan.js
-      Escaped   : 6066ms
-      Unescaped : 464ms
-      Total     : 6530ms
-
-    Handlebars.js
-      Escaped   : 4445ms
-      Unescaped : 1031ms
-      Total     : 5476ms
-
-    Gaikan
-      Escaped   : 6ms
-      Unescaped : 7ms
-      Total     : 13ms
-
-    Fest
-      Escaped   : 2726ms
-      Unescaped : 270ms
-      Total     : 2996ms
-
-    EJS
-      Escaped   : 6997ms
-      Unescaped : 3483ms
-      Total     : 10480ms
-
-    EJS without `with`
-      Escaped   : 2830ms
-      Unescaped : 794ms
-      Total     : 3624ms
-
-    ECT
-      Escaped   : 45ms
-      Unescaped : 44ms
-      Total     : 89ms
-
-    Dust
-      Escaped   : 8883ms
-      Unescaped : 1106ms
-      Total     : 9989ms
-
-    doT
-      Escaped   : 2984ms
-      Unescaped : 72ms
-      Total     : 3056ms
-
-    CoffeeKup
-      Escaped   : 3030ms
-      Unescaped : 8434ms
-      Total     : 11464ms
+    Gaikan               (    2ms) - fastest
+    plates               (    2ms) - 0% slower
+    ECT                  (   13ms) - 550% slower
+    HTMLing              (  184ms) - 9100% slower
+    Fest                 (  255ms) - 12650% slower
+    doT                  (  265ms) - 13150% slower
+    blueimp-tmpl         (  285ms) - 14150% slower
+    Jade without `with`  (  327ms) - 16250% slower
+    artTemplate          (  333ms) - 16550% slower
+    Handlebars.js        (  396ms) - 19700% slower
+    Tangular             (  409ms) - 20350% slower
+    lodash               (  416ms) - 20700% slower
+    EJS without `with`   (  444ms) - 22100% slower
+    Slm                  (  445ms) - 22150% slower
+    Underscore           (  469ms) - 23350% slower
+    Pug without `with`   (  565ms) - 28150% slower
+    Hogan.js             (  583ms) - 29050% slower
+    nai                  (  704ms) - 35100% slower
+    Pug                  (  718ms) - 35800% slower
+    Swig                 (  785ms) - 39150% slower
+    Jade                 (  893ms) - 44550% slower
+    Dust                 (  921ms) - 45950% slower
+    Nunjucks             (  961ms) - 47950% slower
+    EJS                  ( 1108ms) - 55300% slower
+    BH                   ( 1238ms) - 61800% slower
+    CoffeeKup            ( 1437ms) - 71750% slower
+    Ant.js `.set`        ( 1457ms) - 72750% slower
+    Ant.js               ( 2504ms) - 125100% slower
+    react                (56727ms) - 2836250% slower
 
 ## Usage
 

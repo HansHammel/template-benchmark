@@ -1,41 +1,9 @@
 var data = require('./data');
+var fs = require('fs');
+var path = require('path');
+var os = require('os');
 
-var count = 100000;
-//var count = 1000;
-var fs=require('fs');
-
-var ant = require('./templates/antjs/ant.js');
-var antSet = require('./templates/antjs/ant.set.js');
-var artTemplate = require('./templates/artTemplate/artTemplate.js');
-var bh = require('./templates/bh/bh.js');
-var bt = require('./templates/bt/bt.js');
-var coffeekup = require('./templates/coffeekup/coffeekup.js');
-var dot = require('./templates/dot/dot.js');
-var dust = require('./templates/dust/dust.js');
-var eco = require('./templates/eco/eco.js');
-var ect = require('./templates/ect/ect.js');
-//var egs = require('./templates/egs/egs.js');
-var ejs = require('./templates/ejs/ejs.js');
-var ejsWithoutWith = require('./templates/ejs-without-with/ejs.js');
-var fest = require('./templates/fest/fest.js');
-var gaikan = require('./templates/gaikan/gaikan.js');
-var handlebars = require('./templates/handlebars/handlebars.js');
-var hogan = require('./templates/hogan/hogan.js');
-var htmling = require('./templates/htmling/htmling.js');
-var jade = require('./templates/jade/jade.js');
-var pug = require('./templates/pug/pug.js');
-var jadeWithoutWith = require('./templates/jade-without-with/jade.js');
-var pugWithoutWith = require('./templates/pug-without-with/pug.js');
-//var kendo = require('./templates/kendo-ui/with.js');
-//var kendoWithoutWith = require('./templates/kendo-ui/nowith.js');
-var lodash = require('./templates/lodash/lodash.js');
-var nunjucks = require('./templates/nunjucks/nunjucks.js');
-var plates = require('./templates/plates/plates.js');
-//var reactive = require("./templates/reactive/reactive.js"); //package and deps are broken
-var slm = require('./templates/slm/slm');
-var swig = require('./templates/swig/swig.js');
-var tmpl = require("./templates/tmpl/tmpl.js");
-var underscore = require('./templates/underscore/underscore.js');
+var count = 10000;
 
 /*
 todo:
@@ -65,7 +33,7 @@ var test = function(name, sample, cb) {
 	sample.prepare(data, function() {
 		//run once to store the output for validation before we start measuring
 		sample.step(function(undef, html){
-			fs.writeFileSync('comp/'+name+'.html',html);
+			fs.writeFileSync(path.join('comp',name+'.html'),html);
 			start = Date.now();
 			for (var j = 0; j < count; j++) {
 				sample.step(done);
@@ -92,7 +60,7 @@ var testUnescaped = function(name, sample, cb) {
 	};
 	sample.prepareUnescaped(data, function() {
 		sample.step(function(undef, html){
-			fs.writeFileSync('comp/'+name+'.unescaped.html',html);
+			fs.writeFileSync(path.join('comp',name+'.unescaped.html'),html);
 			start = Date.now();
 			for (var j = 0; j < count; j++) {
 				sample.step(done);
@@ -107,39 +75,87 @@ var testUnescaped = function(name, sample, cb) {
 	});
 };
 
+
+var ant = './templates/antjs/ant.js';
+var antSet = './templates/antjs/ant.set.js';
+var artTemplate = './templates/artTemplate/artTemplate.js';
+var bh = './templates/bh/bh.js';
+var bt = './templates/bt/bt.js';
+var coffeekup = './templates/coffeekup/coffeekup.js';
+var dot = './templates/dot/dot.js';
+var dust = './templates/dust/dust.js';
+var eco = './templates/eco/eco.js';
+var ect = './templates/ect/ect.js';
+//var egs = './templates/egs/egs.js';
+var ejs = './templates/ejs/ejs.js';
+var ejsWithoutWith = './templates/ejs-without-with/ejs.js';
+var fest = './templates/fest/fest.js';
+var gaikan = './templates/gaikan/gaikan.js';
+var handlebars = './templates/handlebars/handlebars.js';
+var hogan = './templates/hogan/hogan.js';
+var htmling = './templates/htmling/htmling.js';
+var jade = './templates/jade/jade.js';
+var pug = './templates/pug/pug.js';
+var jadeWithoutWith = './templates/jade-without-with/jade.js';
+var pugWithoutWith = './templates/pug-without-with/pug.js';
+//var kendo = './templates/kendo-ui/with.js';
+//var kendoWithoutWith = './templates/kendo-ui/nowith.js';
+var lodash = './templates/lodash/lodash.js';
+var nunjucks = './templates/nunjucks/nunjucks.js';
+var plates = './templates/plates/plates.js';
+//var reactive = "./templates/reactive/reactive.js"; //package and deps are broken
+var slm = './templates/slm/slm';
+var swig = './templates/swig/swig.js';
+var tmpl = "./templates/tmpl/tmpl.js";
+var underscore = './templates/underscore/underscore.js';
+var react = './templates/react/react.js';
+//var marko = './templates/marko/marko.js';
+//var domly = './templates/domly/domly.js';
+var ftejs = './templates/fte.js/fte.js';
+var tangular = './templates/tangular/tangular.js';
+var nai = './templates/nai/nai.js';
+var fastreact = './templates/fast-react/fast-react.js';
+
 var samples = [
-	{name: 'Ant.js `.set`', sample: antSet},
-	{name: 'Ant.js', sample: ant},
-	{name: 'artTemplate', sample: artTemplate},
-	{name: 'BH', sample: bh},
-	{name: 'BT', sample: bt},
-	{name: 'CoffeeKup', sample : coffeekup},
-	{name: 'doT', sample : dot},
-	{name: 'Dust', sample : dust},
-	//{name: 'Eco', sample : eco},
-	{name: 'ECT', sample: ect},
-	//{name: 'EGS', sample: egs},
-	{name: 'EJS without `with`', sample : ejsWithoutWith},
-	{name: 'EJS', sample : ejs},
-	{name: 'Fest', sample : fest},
-	{name: 'Gaikan', sample: gaikan},
-	{name: 'Handlebars.js', sample : handlebars},
-	{name: 'Hogan.js', sample : hogan},
-	{name: 'HTMLing', sample: htmling},
-	{name: 'Jade without `with`', sample : jadeWithoutWith},
-	{name: 'Jade', sample : jade},
-    {name: 'Pug without `with`', sample : pugWithoutWith},
-    {name: 'Pug', sample : pug},
-	//{name: 'Kendo UI no `with`', sample: kendoWithoutWith},
-	//{name: 'Kendo UI', sample: kendo},
-	{name: 'lodash', sample: lodash},
-	{name: 'Nunjucks', sample: nunjucks},
-	{name: 'plates', sample: plates},
-	//{name: 'reactive.js', sample: reactive},
-	{name: 'Slm', sample: slm},
-	{name: 'Swig', sample : swig},
-	{name: 'blueimp-tmpl', sample : tmpl},
-	{name: 'Underscore', sample : underscore}
+	{name: 'Ant.js `.set`', sample: require(antSet)},
+	{name: 'Ant.js', sample: require(ant)},
+	{name: 'artTemplate', sample: require(artTemplate)},
+	{name: 'BH', sample: require(bh)},
+	{name: 'blueimp-tmpl', sample : require(tmpl)},
+	//{name: 'BT', sample: require(bt)}, // breakts the test results
+	{name: 'CoffeeKup', sample : require(coffeekup)},
+	{name: 'doT', sample : require(dot)},
+	{name: 'Dust', sample : require(dust)},
+    //{name: 'marko', sample : require(marko)},
+    //{name: 'domly', sample : require(domly)},
+	//{name: 'Eco', sample : require(eco)},
+	{name: 'ECT', sample: require(ect)},
+	//{name: 'EGS', sample: require(egs)},
+	{name: 'EJS without `with`', sample : require(ejsWithoutWith)},
+	{name: 'EJS', sample : require(ejs)},
+	{name: 'Fest', sample : require(fest)},
+    //{name: 'fTE.js', sample : require(ftejs)},
+	{name: 'Gaikan', sample: require(gaikan)},
+	{name: 'Handlebars.js', sample : require(handlebars)},
+	{name: 'Hogan.js', sample : require(hogan)},
+	{name: 'HTMLing', sample: require(htmling)},
+	{name: 'Jade without `with`', sample : require(jadeWithoutWith)},
+	{name: 'Jade', sample : require(jade)},
+	//{name: 'Kendo UI no `with`', sample: require(kendoWithoutWith)},
+	//{name: 'Kendo UI', sample: require(kendo)},
+	{name: 'lodash', sample: require(lodash)},
+    {name: 'nai', sample: require(nai)},  // deprecation warning poluting results
+	{name: 'Nunjucks', sample: require(nunjucks)},
+	{name: 'plates', sample: require(plates)},
+    {name: 'Pug without `with`', sample : require(pugWithoutWith)},
+    {name: 'Pug', sample : require(pug)},
+    {name: 'react', sample: require(react)},
+	//{name: 'reactive.js', sample: require(reactive)},
+	{name: 'Slm', sample: require(slm)},
+	{name: 'Swig', sample : require(swig)},
+    {name: 'Tangular', sample: require(tangular)},
+	{name: 'Underscore', sample : require(underscore)},
+    {name: 'fast-react', sample : require(fastreact)}
 ];
 
 var results = [];
@@ -148,7 +164,8 @@ var pad = function (val, num, pre) {
 	while (val.length < num) val = (pre ? ' ' : '') + val + (pre ? '' : ' ');
 	return val;
 };
-var runTests = function () {
+var runTests = function (loops) {
+	count = loops || count;
 	if (samples.length) {
 		var sample = samples.pop();
 		test(sample.name, sample.sample, function (err, name, result) {
@@ -185,5 +202,13 @@ var runTests = function () {
 	}
 };
 
-console.log('Rendering ' + count + ' templates:\n');
-runTests();
+
+
+if (!module.parent) {
+    console.log('Rendering ' + count + ' templates:'+os.EOL);
+    runTests();
+}
+
+module.exports = {
+    runTests: runTests
+}
