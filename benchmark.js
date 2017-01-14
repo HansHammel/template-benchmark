@@ -75,9 +75,11 @@ var testUnescaped = function(name, sample, cb) {
 	});
 };
 
+//disabled: uses deprecated contextify -> build failing on travis
+// removed     "ant.js": "^0.2.2", from package.json
+//var ant = './templates/antjs/ant.js';
+//var antSet = './templates/antjs/ant.set.js';
 
-var ant = './templates/antjs/ant.js';
-var antSet = './templates/antjs/ant.set.js';
 var artTemplate = './templates/artTemplate/artTemplate.js';
 var bh = './templates/bh/bh.js';
 var bt = './templates/bt/bt.js';
@@ -117,8 +119,8 @@ var nai = './templates/nai/nai.js';
 var fastreact = './templates/fast-react/fast-react.js';
 
 var samples = [
-	{name: 'Ant.js `.set`', sample: require(antSet)},
-	{name: 'Ant.js', sample: require(ant)},
+	//{name: 'Ant.js `.set`', sample: require(antSet)},
+	//{name: 'Ant.js', sample: require(ant)},
 	{name: 'artTemplate', sample: require(artTemplate)},
 	{name: 'BH', sample: require(bh)},
 	{name: 'blueimp-tmpl', sample : require(tmpl)},
