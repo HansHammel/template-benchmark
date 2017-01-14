@@ -114,7 +114,8 @@ var react = './templates/react/react.js';
 //var marko = './templates/marko/marko.js';
 //var domly = './templates/domly/domly.js';
 var ftejs = './templates/fte.js/fte.js';
-var tangular = './templates/tangular/tangular.js';
+//disabled: on trvis not found removed     "tangular": "^1.8.0",
+//var tangular = './templates/tangular/tangular.js';
 var nai = './templates/nai/nai.js';
 var fastreact = './templates/fast-react/fast-react.js';
 
@@ -155,7 +156,7 @@ var samples = [
 	//{name: 'reactive.js', sample: require(reactive)},
 	{name: 'Slm', sample: require(slm)},
 	{name: 'Swig', sample : require(swig)},
-    {name: 'Tangular', sample: require(tangular)},
+    //{name: 'Tangular', sample: require(tangular)},
 	{name: 'Underscore', sample : require(underscore)},
     {name: 'fast-react', sample : require(fastreact)}
 ];
