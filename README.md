@@ -34,40 +34,32 @@
 
 ## Engines as of 2019/07/29
 
-	art-template: 3.1.3
-	bh: 4.2.1
-	blueimp-tmpl: 3.7.0
-	coffeekup: 0.3.1
-	domly: 0.0.9
-	dot: 1.1.1
-	dustjs-linkedin: 2.7.5
-	eco: 1.1.0-rc-3
-	ect: 1.0.0
-	egs: 0.3.1
-	ejs: 2.5.5
-	fast-react-render: 1.2.2
-	fast-react-server: 1.3.0
-	fest: 0.12.1
-	fte.js: 0.4.7
-	gaikan: 2.0.2
-	handlebars: 4.0.6
-	hogan.js: 3.0.2
-	htmling: 0.0.8
-	jade: 1.11.0
-	jsdom: 9.9.1
-	jsdom-global: 2.1.1
-	kendo-ui-core: 2019.2.724
-	lodash: 4.17.4
-	marko: 3.14.0
-	nai: 0.1.2
-	nunjucks: 3.0.0
-	plates: 0.4.11
-	pug: 2.0.0-beta6
-	react: 15.4.2
-	react-dom: 15.4.2
-	slm: 0.6.0
-	swig: 1.4.2
-	underscore: 1.8.3
+    art-template: 4.13.2
+    babel-core: 6.21.0
+    babel-preset-react: 6.16.0
+    babel-register: 6.18.0
+    bh: 4.2.1
+    blueimp-tmpl: 3.7.0
+    coffeekup: 0.3.1
+    ect: 1.0.0
+    ejs: 2.5.5
+    fest: 0.12.1
+    gaikan: 2.0.2
+    handlebars: 4.0.6
+    hogan.js: 3.0.2
+    jsdom-global: 3.0.2
+    //TODO: jsrender: 1.0.3
+    lodash: 4.17.4
+    marko: 4.18.10
+    nai: 0.1.2
+    nunjucks: 3.0.0
+    plates: 0.4.11
+    pug: 2.0.0-beta6
+    slm: 2.0.0
+    //TODO: squirrelly: 7.4.0
+    //TODO: template7: 1.4.2
+    //TODO: twig: 1.13.3
+    underscore: 1.8.3
 
 ## Test environment as of 2019/07/29
 
@@ -81,28 +73,28 @@
 ** removed eco egs fte.js jsdom kendo-ui react fast-react due to breaking changes **
 ** TODO: jsrender template7 squirrelly twig **
 
-	Performance report for 10000 templates (win32):
+Performance report for 10000 templates (win32):
 
-	plates               (    2ms) - fastest
-	Gaikan               (    4ms) - 100% slower
-	ECT                  (   16ms) - 700% slower
-	Fest                 (  172ms) - 8500% slower
-	blueimp-tmpl         (  191ms) - 9450% slower
-	Slm                  (  243ms) - 12050% slower
-	marko                (  249ms) - 12350% slower
-	EJS without `with`   (  284ms) - 14100% slower
-	Handlebars.js        (  291ms) - 14450% slower
-	Hogan.js             (  358ms) - 17800% slower
-	nai                  (  410ms) - 20400% slower
-	Underscore           (  448ms) - 22300% slower
-	lodash               (  474ms) - 23600% slower
-	Pug without `with`   (  521ms) - 25950% slower
-	Pug                  (  533ms) - 26550% slower
-	BH                   (  601ms) - 29950% slower
-	Nunjucks             (  740ms) - 36900% slower
-	CoffeeKup            (  821ms) - 40950% slower
-	EJS                  (  883ms) - 44050% slower
-	artTemplate          ( 1293ms) - 64550% slower
+plates               (    2ms) - fastest
+Gaikan               (    4ms) - 100% slower
+ECT                  (   16ms) - 700% slower
+Fest                 (  172ms) - 8500% slower
+blueimp-tmpl         (  191ms) - 9450% slower
+Slm                  (  243ms) - 12050% slower
+marko                (  249ms) - 12350% slower
+EJS without `with`   (  284ms) - 14100% slower
+Handlebars.js        (  291ms) - 14450% slower
+Hogan.js             (  358ms) - 17800% slower
+nai                  (  410ms) - 20400% slower
+Underscore           (  448ms) - 22300% slower
+lodash               (  474ms) - 23600% slower
+Pug without `with`   (  521ms) - 25950% slower
+Pug                  (  533ms) - 26550% slower
+BH                   (  601ms) - 29950% slower
+Nunjucks             (  740ms) - 36900% slower
+CoffeeKup            (  821ms) - 40950% slower
+EJS                  (  883ms) - 44050% slower
+artTemplate          ( 1293ms) - 64550% slower
 
 ## Usage
 
