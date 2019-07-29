@@ -23,7 +23,6 @@
     "hogan.js": "^3.0.2",
     "jsdom-global": "^3.0.2",
     "jsrender": "^1.0.3",
-    "kendo-ui-core": "^2019.2.724",
     "lodash": "^4.17.4",
     "nai": "^0.1.2",
     "nunjucks": "^3.0.0",
