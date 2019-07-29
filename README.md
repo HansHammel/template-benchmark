@@ -77,6 +77,10 @@
 
 ## Results as of 2019/07/29
 
+	** removed dot dustjs-linkedin jade htmling domly swig due to bugs **	
+	** removed coffeekup eco egs fte.js jsdom kendo-ui marko due to breaking changes **
+	** TODO: jsrender template7 squirrelly twig **
+
 	Performance report for 10000 templates (win32):
 
 	plates               (    1ms) - fastest

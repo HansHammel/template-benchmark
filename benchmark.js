@@ -111,13 +111,17 @@ var swig = './templates/swig/swig.js';
 var tmpl = "./templates/tmpl/tmpl.js";
 var underscore = './templates/underscore/underscore.js';
 var react = './templates/react/react.js';
-//var marko = './templates/marko/marko.js';
+var marko = './templates/marko/marko.js';
 //var domly = './templates/domly/domly.js';
 var ftejs = './templates/fte.js/fte.js';
 //disabled: on trvis not found removed     "tangular": "^1.8.0",
 //var tangular = './templates/tangular/tangular.js';
 var nai = './templates/nai/nai.js';
 var fastreact = './templates/fast-react/fast-react.js';
+//TODO: var jsrender = './templates/jsrender/jsrender.js';
+//TODO: var squirrelly =  = './templates/squirrelly/squirrelly.js';
+//TODO: var template7 = './templates/template7/template7.js';
+//TODO: var twig = './templates/twig/twig.js';
 
 var samples = [
 	//{name: 'Ant.js `.set`', sample: require(antSet)},
@@ -127,9 +131,12 @@ var samples = [
 	{name: 'blueimp-tmpl', sample : require(tmpl)},
 	//{name: 'BT', sample: require(bt)}, // breakts the test results
 	{name: 'CoffeeKup', sample : require(coffeekup)},
-	{name: 'doT', sample : require(dot)},
-	{name: 'Dust', sample : require(dust)},
-    //{name: 'marko', sample : require(marko)},
+	// Command Injection
+	//{name: 'doT', sample : require(dot)},
+	//  Regular Expression Denial of Service
+	//{name: 'Dust', sample : require(dust)},
+    {name: 'marko', sample : require(marko)},
+	// Prototype Pollution https://npmjs.com/advisories/577
     //{name: 'domly', sample : require(domly)},
 	//{name: 'Eco', sample : require(eco)},
 	{name: 'ECT', sample: require(ect)},
@@ -141,9 +148,13 @@ var samples = [
 	{name: 'Gaikan', sample: require(gaikan)},
 	{name: 'Handlebars.js', sample : require(handlebars)},
 	{name: 'Hogan.js', sample : require(hogan)},
-	{name: 'HTMLing', sample: require(htmling)},
-	{name: 'Jade without `with`', sample : require(jadeWithoutWith)},
-	{name: 'Jade', sample : require(jade)},
+	// bug https://npmjs.com/advisories/95 ,  Regular Expression Denial of Service
+	// {name: 'HTMLing', sample: require(htmling)},
+	//uglyfy-js dos bug https://npmjs.com/advisories/48
+	//critical bug https://npmjs.com/advisories/568 Sandbox Bypass Leading to Arbitrary Code Execution
+	//{name: 'Jade without `with`', sample : require(jadeWithoutWith)},
+	//{name: 'Jade', sample : require(jade)},
+	//TODO: {name: 'JsRender', sample : require(jsrender)},
 	//{name: 'Kendo UI no `with`', sample: require(kendoWithoutWith)},
 	//{name: 'Kendo UI', sample: require(kendo)},
 	{name: 'lodash', sample: require(lodash)},
@@ -155,8 +166,12 @@ var samples = [
     {name: 'react', sample: require(react)},
 	//{name: 'reactive.js', sample: require(reactive)},
 	{name: 'Slm', sample: require(slm)},
-	{name: 'Swig', sample : require(swig)},
+	//TODO: {name: 'Squirrelly', sample: require(squirrelly)},
+	//uglyfy-js dos bug https://npmjs.com/advisories/48
+	//{name: 'Swig', sample : require(swig)},
     //{name: 'Tangular', sample: require(tangular)},
+	//TODO:{name: 'Template7', sample : require(tmplate7)},
+	//TODO:{name: 'Twig', sample : require(twig)},
 	{name: 'Underscore', sample : require(underscore)},
     {name: 'fast-react', sample : require(fastreact)}
 ];
