@@ -13,6 +13,7 @@
     "babel-register": "^6.18.0",
     "bh": "^4.2.1",
     "blueimp-tmpl": "^3.7.0",
+    "coffeekup": "^0.3.1",
     "ect": "^1.0.0",
     "ejs": "^2.5.5",
     "fast-react-render": "^1.2.2",
