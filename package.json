@@ -28,11 +28,11 @@
     "gaikan": "^2.0.2",
     "handlebars": "^4.0.6",
     "hogan.js": "^3.0.2",
-    "htmling": "0.0.7",
+    "htmling": "0.0.8",
     "jade": "^1.11.0",
     "jsdom": "^9.9.1",
     "jsdom-global": "^2.1.1",
-    "kendo-ui-core": "^2016.3.1306",
+    "kendo-ui-core": "^2019.2.724",
     "lodash": "^4.17.4",
     "marko": "^3.14.0",
     "nai": "^0.1.2",
@@ -47,11 +47,13 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
+    "mocha": "^6.2.0",
     "sinon": "^1.17.7"
   },
   "scripts": {
     "test": "mocha --reporter spec test/benchmark.test.js"
   },
-  "engines" : { "node" : ">=0.12" }
+  "engines": {
+    "node": ">=0.12"
+  }
 }

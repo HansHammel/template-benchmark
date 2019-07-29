@@ -4,7 +4,7 @@
 
 - weakness of this test: it does not verify the output for correctness
 
-## Engines as of 12/4/2016
+## Engines as of 2016/04/12
 
 - ant.js v0.2.2
 - art-template v3.0.3
@@ -32,45 +32,80 @@
 - [Swig](https://github.com/paularmstrong/swig) v1.4.2
 - [Underscore](https://github.com/documentcloud/underscore) v1.8.3 ([website](http://underscorejs.org/))
 
-## Test environment as of 12/4/2016
+## Engines as of 2019/07/29
+
+	art-template: 3.1.3
+	bh: 4.2.1
+	blueimp-tmpl: 3.7.0
+	coffeekup: 0.3.1
+	domly: 0.0.9
+	dot: 1.1.1
+	dustjs-linkedin: 2.7.5
+	eco: 1.1.0-rc-3
+	ect: 1.0.0
+	egs: 0.3.1
+	ejs: 2.5.5
+	fast-react-render: 1.2.2
+	fast-react-server: 1.3.0
+	fest: 0.12.1
+	fte.js: 0.4.7
+	gaikan: 2.0.2
+	handlebars: 4.0.6
+	hogan.js: 3.0.2
+	htmling: 0.0.8
+	jade: 1.11.0
+	jsdom: 9.9.1
+	jsdom-global: 2.1.1
+	kendo-ui-core: 2019.2.724
+	lodash: 4.17.4
+	marko: 3.14.0
+	nai: 0.1.2
+	nunjucks: 3.0.0
+	plates: 0.4.11
+	pug: 2.0.0-beta6
+	react: 15.4.2
+	react-dom: 15.4.2
+	slm: 0.6.0
+	swig: 1.4.2
+	underscore: 1.8.3
+
+## Test environment as of 2019/07/29
 
 - CPU: Intel Core i7-2675QM 2.2Ghz 8GB 
 - OS: Windows 10 Pro 64-Bit
-- Node.JS version: 6.9.1
+- Node.JS version: 10.16.0
 
-## Results as of 12/4/2016
+## Results as of 2019/07/29
 
-    Performance report for 10000 templates (win32):
+	Performance report for 10000 templates (win32):
 
-    Gaikan               (    2ms) - fastest
-    plates               (    2ms) - 0% slower
-    ECT                  (   13ms) - 550% slower
-    HTMLing              (  184ms) - 9100% slower
-    Fest                 (  255ms) - 12650% slower
-    doT                  (  265ms) - 13150% slower
-    blueimp-tmpl         (  285ms) - 14150% slower
-    Jade without `with`  (  327ms) - 16250% slower
-    artTemplate          (  333ms) - 16550% slower
-    Handlebars.js        (  396ms) - 19700% slower
-    Tangular             (  409ms) - 20350% slower
-    lodash               (  416ms) - 20700% slower
-    EJS without `with`   (  444ms) - 22100% slower
-    Slm                  (  445ms) - 22150% slower
-    Underscore           (  469ms) - 23350% slower
-    Pug without `with`   (  565ms) - 28150% slower
-    Hogan.js             (  583ms) - 29050% slower
-    nai                  (  704ms) - 35100% slower
-    Pug                  (  718ms) - 35800% slower
-    Swig                 (  785ms) - 39150% slower
-    Jade                 (  893ms) - 44550% slower
-    Dust                 (  921ms) - 45950% slower
-    Nunjucks             (  961ms) - 47950% slower
-    EJS                  ( 1108ms) - 55300% slower
-    BH                   ( 1238ms) - 61800% slower
-    CoffeeKup            ( 1437ms) - 71750% slower
-    Ant.js `.set`        ( 1457ms) - 72750% slower
-    Ant.js               ( 2504ms) - 125100% slower
-    react                (56727ms) - 2836250% slower
+	plates               (    1ms) - fastest
+	Gaikan               (    7ms) - 600% slower
+	ECT                  (   14ms) - 1300% slower
+	HTMLing              (  193ms) - 19200% slower
+	blueimp-tmpl         (  200ms) - 19900% slower
+	Fest                 (  225ms) - 22400% slower
+	Slm                  (  240ms) - 23900% slower
+	doT                  (  268ms) - 26700% slower
+	artTemplate          (  274ms) - 27300% slower
+	Jade without `with`  (  279ms) - 27800% slower
+	EJS without `with`   (  280ms) - 27900% slower
+	Handlebars.js        (  332ms) - 33100% slower
+	Hogan.js             (  358ms) - 35700% slower
+	lodash               (  401ms) - 40000% slower
+	nai                  (  440ms) - 43900% slower
+	Swig                 (  460ms) - 45900% slower
+	Underscore           (  466ms) - 46500% slower
+	Dust                 (  473ms) - 47200% slower
+	Jade                 (  484ms) - 48300% slower
+	Pug                  (  518ms) - 51700% slower
+	Pug without `with`   (  533ms) - 53200% slower
+	BH                   (  596ms) - 59500% slower
+	Nunjucks             (  735ms) - 73400% slower
+	CoffeeKup            (  835ms) - 83400% slower
+	EJS                  (  937ms) - 93600% slower
+	fast-react           ( 9087ms) - 908600% slower
+	react                (44355ms) - 4435400% slower
 
 ## Usage
 
