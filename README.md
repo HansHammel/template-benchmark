@@ -81,28 +81,29 @@
 - **removed eco egs fte.js jsdom kendo-ui react fast-react due to breaking changes**
 - **TODO: jsrender template7 squirrelly twig** 
 
-	Performance report for 10000 templates (win32):
 
-	plates               (    2ms) - fastest
-	Gaikan               (    4ms) - 100% slower
-	ECT                  (   16ms) - 700% slower
-	Fest                 (  172ms) - 8500% slower
-	blueimp-tmpl         (  191ms) - 9450% slower
-	Slm                  (  243ms) - 12050% slower
-	marko                (  249ms) - 12350% slower
-	EJS without `with`   (  284ms) - 14100% slower
-	Handlebars.js        (  291ms) - 14450% slower
-	Hogan.js             (  358ms) - 17800% slower
-	nai                  (  410ms) - 20400% slower
-	Underscore           (  448ms) - 22300% slower
-	lodash               (  474ms) - 23600% slower
-	Pug without `with`   (  521ms) - 25950% slower
-	Pug                  (  533ms) - 26550% slower
-	BH                   (  601ms) - 29950% slower
-	Nunjucks             (  740ms) - 36900% slower
-	CoffeeKup            (  821ms) - 40950% slower
-	EJS                  (  883ms) - 44050% slower
-	artTemplate          ( 1293ms) - 64550% slower
+		Performance report for 10000 templates (win32):
+
+		plates               (    2ms) - fastest
+		Gaikan               (    4ms) - 100% slower
+		ECT                  (   16ms) - 700% slower
+		Fest                 (  172ms) - 8500% slower
+		blueimp-tmpl         (  191ms) - 9450% slower
+		Slm                  (  243ms) - 12050% slower
+		marko                (  249ms) - 12350% slower
+		EJS without `with`   (  284ms) - 14100% slower
+		Handlebars.js        (  291ms) - 14450% slower
+		Hogan.js             (  358ms) - 17800% slower
+		nai                  (  410ms) - 20400% slower
+		Underscore           (  448ms) - 22300% slower
+		lodash               (  474ms) - 23600% slower
+		Pug without `with`   (  521ms) - 25950% slower
+		Pug                  (  533ms) - 26550% slower
+		BH                   (  601ms) - 29950% slower
+		Nunjucks             (  740ms) - 36900% slower
+		CoffeeKup            (  821ms) - 40950% slower
+		EJS                  (  883ms) - 44050% slower
+		artTemplate          ( 1293ms) - 64550% slower
 
 
 
