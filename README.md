@@ -79,4 +79,4 @@
 	npm install
 	node ./benchmark.js
 
-[![Dependency Status](https://david-dm.org/HansHammel/template-benchmark.svg)](https://david-dm.org/HansHammel/template-benchmark)
+[![Dependency Status](https://david-dm.org/HansHammel/template-benchmark.svg)](https://david-dm.org/HansHammel/template-benchmark) [![Greenkeeper badge](https://badges.greenkeeper.io/HansHammel/template-benchmark.svg)](https://greenkeeper.io/)
