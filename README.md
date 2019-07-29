@@ -77,9 +77,9 @@
 
 ## Results as of 2019/07/29
 
-**removed dot dustjs-linkedin jade htmling domly swig due to bugs** 
-**removed eco egs fte.js jsdom kendo-ui react fast-react due to breaking changes** 
-**TODO: jsrender template7 squirrelly twig** 
+- **removed dot dustjs-linkedin jade htmling domly swig due to bugs**
+- **removed eco egs fte.js jsdom kendo-ui react fast-react due to breaking changes**
+- **TODO: jsrender template7 squirrelly twig** 
 
 	Performance report for 10000 templates (win32):
 
