@@ -81,6 +81,7 @@
 - **removed eco egs fte.js jsdom kendo-ui react fast-react due to breaking changes**
 - **TODO: jsrender template7 squirrelly twig** 
 
+
 	Performance report for 10000 templates (win32):
 
 	plates               (    2ms) - fastest
@@ -103,6 +104,7 @@
 	CoffeeKup            (  821ms) - 40950% slower
 	EJS                  (  883ms) - 44050% slower
 	artTemplate          ( 1293ms) - 64550% slower
+
 
 ## Usage
 
