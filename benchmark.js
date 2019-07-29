@@ -82,7 +82,7 @@ var testUnescaped = function(name, sample, cb) {
 
 var artTemplate = './templates/artTemplate/artTemplate.js';
 var bh = './templates/bh/bh.js';
-var bt = './templates/bt/bt.js';
+//var bt = './templates/bt/bt.js';
 var coffeekup = './templates/coffeekup/coffeekup.js';
 var dot = './templates/dot/dot.js';
 var dust = './templates/dust/dust.js';
@@ -95,7 +95,7 @@ var fest = './templates/fest/fest.js';
 var gaikan = './templates/gaikan/gaikan.js';
 var handlebars = './templates/handlebars/handlebars.js';
 var hogan = './templates/hogan/hogan.js';
-var htmling = './templates/htmling/htmling.js';
+//var htmling = './templates/htmling/htmling.js';
 var jade = './templates/jade/jade.js';
 var pug = './templates/pug/pug.js';
 var jadeWithoutWith = './templates/jade-without-with/jade.js';
@@ -107,17 +107,17 @@ var nunjucks = './templates/nunjucks/nunjucks.js';
 var plates = './templates/plates/plates.js';
 //var reactive = "./templates/reactive/reactive.js"; //package and deps are broken
 var slm = './templates/slm/slm';
-var swig = './templates/swig/swig.js';
+//var swig = './templates/swig/swig.js';
 var tmpl = "./templates/tmpl/tmpl.js";
 var underscore = './templates/underscore/underscore.js';
-var react = './templates/react/react.js';
+//var react = './templates/react/react.js';
 var marko = './templates/marko/marko.js';
 //var domly = './templates/domly/domly.js';
-var ftejs = './templates/fte.js/fte.js';
+//var ftejs = './templates/fte.js/fte.js';
 //disabled: on trvis not found removed     "tangular": "^1.8.0",
 //var tangular = './templates/tangular/tangular.js';
 var nai = './templates/nai/nai.js';
-var fastreact = './templates/fast-react/fast-react.js';
+//var fastreact = './templates/fast-react/fast-react.js';
 //TODO: var jsrender = './templates/jsrender/jsrender.js';
 //TODO: var squirrelly =  = './templates/squirrelly/squirrelly.js';
 //TODO: var template7 = './templates/template7/template7.js';
@@ -163,7 +163,7 @@ var samples = [
 	{name: 'plates', sample: require(plates)},
     {name: 'Pug without `with`', sample : require(pugWithoutWith)},
     {name: 'Pug', sample : require(pug)},
-    {name: 'react', sample: require(react)},
+    //{name: 'react', sample: require(react)},
 	//{name: 'reactive.js', sample: require(reactive)},
 	{name: 'Slm', sample: require(slm)},
 	//TODO: {name: 'Squirrelly', sample: require(squirrelly)},
@@ -173,7 +173,7 @@ var samples = [
 	//TODO:{name: 'Template7', sample : require(tmplate7)},
 	//TODO:{name: 'Twig', sample : require(twig)},
 	{name: 'Underscore', sample : require(underscore)},
-    {name: 'fast-react', sample : require(fastreact)}
+    //{name: 'fast-react', sample : require(fastreact)}
 ];
 
 var results = [];

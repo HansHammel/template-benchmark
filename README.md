@@ -77,39 +77,32 @@
 
 ## Results as of 2019/07/29
 
-	** removed dot dustjs-linkedin jade htmling domly swig due to bugs **	
-	** removed coffeekup eco egs fte.js jsdom kendo-ui marko due to breaking changes **
-	** TODO: jsrender template7 squirrelly twig **
+** removed dot dustjs-linkedin jade htmling domly swig due to bugs **	
+** removed eco egs fte.js jsdom kendo-ui react fast-react due to breaking changes **
+** TODO: jsrender template7 squirrelly twig **
 
 	Performance report for 10000 templates (win32):
 
-	plates               (    1ms) - fastest
-	Gaikan               (    7ms) - 600% slower
-	ECT                  (   14ms) - 1300% slower
-	HTMLing              (  193ms) - 19200% slower
-	blueimp-tmpl         (  200ms) - 19900% slower
-	Fest                 (  225ms) - 22400% slower
-	Slm                  (  240ms) - 23900% slower
-	doT                  (  268ms) - 26700% slower
-	artTemplate          (  274ms) - 27300% slower
-	Jade without `with`  (  279ms) - 27800% slower
-	EJS without `with`   (  280ms) - 27900% slower
-	Handlebars.js        (  332ms) - 33100% slower
-	Hogan.js             (  358ms) - 35700% slower
-	lodash               (  401ms) - 40000% slower
-	nai                  (  440ms) - 43900% slower
-	Swig                 (  460ms) - 45900% slower
-	Underscore           (  466ms) - 46500% slower
-	Dust                 (  473ms) - 47200% slower
-	Jade                 (  484ms) - 48300% slower
-	Pug                  (  518ms) - 51700% slower
-	Pug without `with`   (  533ms) - 53200% slower
-	BH                   (  596ms) - 59500% slower
-	Nunjucks             (  735ms) - 73400% slower
-	CoffeeKup            (  835ms) - 83400% slower
-	EJS                  (  937ms) - 93600% slower
-	fast-react           ( 9087ms) - 908600% slower
-	react                (44355ms) - 4435400% slower
+	plates               (    2ms) - fastest
+	Gaikan               (    4ms) - 100% slower
+	ECT                  (   16ms) - 700% slower
+	Fest                 (  172ms) - 8500% slower
+	blueimp-tmpl         (  191ms) - 9450% slower
+	Slm                  (  243ms) - 12050% slower
+	marko                (  249ms) - 12350% slower
+	EJS without `with`   (  284ms) - 14100% slower
+	Handlebars.js        (  291ms) - 14450% slower
+	Hogan.js             (  358ms) - 17800% slower
+	nai                  (  410ms) - 20400% slower
+	Underscore           (  448ms) - 22300% slower
+	lodash               (  474ms) - 23600% slower
+	Pug without `with`   (  521ms) - 25950% slower
+	Pug                  (  533ms) - 26550% slower
+	BH                   (  601ms) - 29950% slower
+	Nunjucks             (  740ms) - 36900% slower
+	CoffeeKup            (  821ms) - 40950% slower
+	EJS                  (  883ms) - 44050% slower
+	artTemplate          ( 1293ms) - 64550% slower
 
 ## Usage
 

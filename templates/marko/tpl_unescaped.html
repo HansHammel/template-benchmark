@@ -5,8 +5,8 @@
 	<body>
 		<p>$!{data.text}</p>
 		<if(data.projects)>
-			<for(project in data.projects)>
-				<a href="$!{project.url}">$!{project.name}</a>
+			<for|project| of=data.projects>
+				<a href=`$!{project.url}`>$!{project.name}</a>
 				<p>$!{project.description}</p>
 			</for>
     </if>

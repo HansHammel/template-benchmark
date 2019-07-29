@@ -88,7 +88,7 @@ describe('ensure benchmark is running successfully', function(){
         require('../benchmark.js').runTests(1);
         assert.isTrue(console.log.called, "log should have been called");
         assert.isFalse(console.log.calledOnce, "not only once");
-        assert.equal(console.log.callCount, 45, "but many times");
+        assert.equal(console.log.callCount, 30, "but many times");
         //expect(console.log.getCall(0).args[0]).to.equal("ABC");
         //expect(console.log.getCall(1).args[0]).to.equal("123");
         //expect(console.log.args[2][0]).to.equal("CBA");
@@ -113,6 +113,7 @@ describe('ensure benchmark has no error or deprecation warnings', function(){
     it('should have no errors or deprecation warnings', function(done){
         require('../benchmark.js').runTests(1);
         var o = stdout.str();
+
         assert.isFalse(/error/i.test(o), 'should not print errors');
         assert.isFalse(/deprecat/i.test(o), 'should not print deprecation warnings');
 

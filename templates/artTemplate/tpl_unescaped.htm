@@ -5,10 +5,10 @@
 <body>
 <p>{{text }}</p>
 {{ if projects.length }}
-{{ each projects as project }}
-<a href="{{ =project.url }}"> {{ =project.name }}</a>
+{{ each projects project }}
+<a href="{{ project.url }}"> {{ project.name }}</a>
 
-<p>{{ =project.description }}></p>
+<p>{{ project.description }}</p>
 {{ /each }}
 {{ else }}
 No projects
