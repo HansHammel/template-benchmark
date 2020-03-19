@@ -18,7 +18,7 @@
     "ejs": "^2.5.5",
     "fest": "^0.12.1",
     "gaikan": "^2.0.2",
-    "handlebars": "^4.0.6",
+    "handlebars": "^4.7.3",
     "hogan.js": "^3.0.2",
     "jsdom-global": "^3.0.2",
     "jsrender": "^1.0.3",
