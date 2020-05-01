@@ -32,7 +32,8 @@
     "squirrelly": "^7.4.0",
     "template7": "^1.4.2",
     "twig": "^1.13.3",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -40,9 +41,12 @@
     "sinon": "^7.3.2"
   },
   "scripts": {
-    "test": "mocha --reporter spec test/benchmark.test.js"
+    "test": "mocha --reporter spec test/benchmark.test.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=0.12"
-  }
+  },
+  "snyk": true
 }
