@@ -1,6 +1,6 @@
 # Node.JS template engines benchmark
 
-[![Dependency Status](https://david-dm.org/HansHammel/template-benchmark.svg)](https://david-dm.org/HansHammel/template-benchmark) [![Greenkeeper badge](https://badges.greenkeeper.io/HansHammel/template-benchmark.svg)](https://greenkeeper.io/)
+[![Dependency Status](https://david-dm.org/HansHammel/template-benchmark.svg)](https://david-dm.org/HansHammel/template-benchmark) 
 
 ## Note
 
