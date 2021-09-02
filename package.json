@@ -31,7 +31,7 @@
     "slm": "^2.0.0",
     "squirrelly": "^7.9.2",
     "template7": "^1.4.2",
-    "twig": "^1.13.3",
+    "twig": "^1.15.4",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
