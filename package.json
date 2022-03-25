@@ -22,7 +22,7 @@
     "hogan.js": "^3.0.2",
     "jsdom-global": "^3.0.2",
     "jsrender": "^1.0.6",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.20",
     "marko": "^4.19.8",
     "nai": "^0.1.2",
     "nunjucks": "^3.2.1",
@@ -32,7 +32,8 @@
     "squirrelly": "^7.9.2",
     "template7": "^1.4.2",
     "twig": "^1.13.3",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -40,9 +41,12 @@
     "sinon": "^7.3.2"
   },
   "scripts": {
-    "test": "mocha --reporter spec test/benchmark.test.js"
+    "test": "mocha --reporter spec test/benchmark.test.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": ">=0.12"
-  }
+  },
+  "snyk": true
 }
