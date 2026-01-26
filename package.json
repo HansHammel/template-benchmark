@@ -22,7 +22,7 @@
     "hogan.js": "^3.0.2",
     "jsdom-global": "^3.0.2",
     "jsrender": "^1.0.6",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.23",
     "marko": "^4.19.8",
     "nai": "^0.1.2",
     "nunjucks": "^3.2.1",
